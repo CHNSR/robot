@@ -1,31 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-18T16:02:42.255902" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-19T00:09:02.312640" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Freamwork" source="C:\Users\chano\Desktop\Robot_Freamwork">
-<suite id="s1-s1" name="Task" source="C:\Users\chano\Desktop\Robot_Freamwork\Task">
-<suite id="s1-s1-s1" name="Task19" source="C:\Users\chano\Desktop\Robot_Freamwork\Task\Task19.robot">
-<test id="s1-s1-s1-t1" name="Test Case With Teardown" line="10">
+<suite id="s1-s1" name="TaskEng10" source="C:\Users\chano\Desktop\Robot_Freamwork\TaskEng10.robot">
+<test id="s1-s1-t1" name="Test01" line="9">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-09-19T00:09:02.346537" level="INFO">${include_summary} = True</msg>
+<var>${include_summary}</var>
+<arg>True</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-09-19T00:09:02.346537" elapsed="0.000000"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-09-19T00:09:02.346537" level="INFO">@{overview} = [ 77.9ms | 60.0ms ]</msg>
+<var>@{overview}</var>
+<arg>77.9ms</arg>
+<arg>60.0ms</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-09-19T00:09:02.346537" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-09-19T00:09:02.346537" level="INFO">&amp;{report_config} = { data_sources={data_sources1:Firebase, data_sources2:AWS} | report_sections={overview: ['77.9ms', '60.0ms'], detailed_findings:goood} | output_format={data_sources1:pdf, data_sources2:docx} }</msg>
+<var>&amp;{report_config}</var>
+<arg>data_sources={data_sources1:Firebase, data_sources2:AWS}</arg>
+<arg>report_sections={overview: @{overview}, detailed_findings:goood}</arg>
+<arg>output_format={data_sources1:pdf, data_sources2:docx}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-09-19T00:09:02.346537" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Compliance Report">
 <kw name="Log To Console" owner="BuiltIn">
-<arg>Running the test</arg>
+<arg>Incluse summary ${include_summary}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-18T16:02:42.277520" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-19T00:09:02.346537" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
-<arg>Test Case Teardown is running</arg>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>data_sources ${report_config['data_sources']}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-18T16:02:42.278520" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-19T00:09:02.346537" elapsed="0.007418"/>
 </kw>
-<status status="PASS" start="2024-09-18T16:02:42.276552" elapsed="0.001968"/>
+<arg>${include_summary}</arg>
+<arg>&amp;{report_config}</arg>
+<status status="PASS" start="2024-09-19T00:09:02.346537" elapsed="0.007418"/>
+</kw>
+<status status="PASS" start="2024-09-19T00:09:02.346021" elapsed="0.007934"/>
 </test>
-<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
-<arg>Suite Teardown is running</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-18T16:02:42.279520" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-09-18T16:02:42.275520" elapsed="0.004000"/>
+<status status="PASS" start="2024-09-19T00:09:02.337417" elapsed="0.018659"/>
 </suite>
-<status status="PASS" start="2024-09-18T16:02:42.273520" elapsed="0.007000"/>
-</suite>
-<status status="PASS" start="2024-09-18T16:02:42.258900" elapsed="0.022869"/>
+<status status="PASS" start="2024-09-19T00:09:02.312640" elapsed="0.045264"/>
 </suite>
 <statistics>
 <total>
@@ -35,8 +56,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Robot Freamwork">Robot Freamwork</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Task">Robot Freamwork.Task</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Task19">Robot Freamwork.Task.Task19</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TaskEng10">Robot Freamwork.TaskEng10</stat>
 </suite>
 </statistics>
 <errors>
