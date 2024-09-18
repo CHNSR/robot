@@ -1,0 +1,16 @@
+1726649594475	geckodriver	INFO	Listening on 127.0.0.1:55467
+1726649597585	mozrunner::runner	INFO	Running command: "C:\\Users\\chano\\.cache\\selenium\\firefox\\win64\\130.0.1\\firefox.exe" "--marionette" "--remote-debuggin ... 8" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\chano\\AppData\\Local\\Temp\\rust_mozprofile49zTN7"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1726649597809	Marionette	INFO	Marionette enabled
+1726649597887	Marionette	INFO	Listening on port 55480
+WebDriver BiDi listening on ws://127.0.0.1:55468
+Read port: 55480
+1726649597977	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:55468/devtools/browser/abd57d0a-e19b-408d-af51-32ad36a38202
+1726649601522	Marionette	INFO	Stopped listening on port 55480
+JavaScript warning: https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.th.tP2XfbQA3V4.es5.O/am=ICgYMHw/d=1/excm=_b,_tp,calloutview/ed=1/dg=0/wt=2/ujg=1/rs=AM-SdHvVZubgPCgv4m-UXXOKJCcQBXFgSA/m=_b,_tp, line 276: Script terminated by timeout at:
+c@https://www.gstatic.com/_/mss/boq-one-google/_/js/k=boq-one-google.OneGoogleWidgetUi.th.tP2XfbQA3V4.es5.O/am=ICgYMHw/d=1/excm=_b,_tp,calloutview/ed=1/dg=0/wt=2/ujg=1/rs=AM-SdHvVZubgPCgv4m-UXXOKJCcQBXFgSA/m=_b,_tp:276:187
+
+Dynamically enable window occlusion 1

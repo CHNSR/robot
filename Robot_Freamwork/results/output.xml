@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-18T16:02:42.255902" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Freamwork" source="C:\Users\chano\Desktop\Robot_Freamwork">
+<suite id="s1-s1" name="Task" source="C:\Users\chano\Desktop\Robot_Freamwork\Task">
+<suite id="s1-s1-s1" name="Task19" source="C:\Users\chano\Desktop\Robot_Freamwork\Task\Task19.robot">
+<test id="s1-s1-s1-t1" name="Test Case With Teardown" line="10">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running the test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T16:02:42.277520" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Test Case Teardown is running</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T16:02:42.278520" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-18T16:02:42.276552" elapsed="0.001968"/>
+</test>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>Suite Teardown is running</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T16:02:42.279520" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-18T16:02:42.275520" elapsed="0.004000"/>
+</suite>
+<status status="PASS" start="2024-09-18T16:02:42.273520" elapsed="0.007000"/>
+</suite>
+<status status="PASS" start="2024-09-18T16:02:42.258900" elapsed="0.022869"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Freamwork">Robot Freamwork</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Task">Robot Freamwork.Task</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Task19">Robot Freamwork.Task.Task19</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

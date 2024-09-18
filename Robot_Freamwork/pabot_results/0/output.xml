@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-18T17:03:04.717250" rpa="false" schemaversion="5">
+<suite id="s1" name="Task25" source="C:\Users\chano\Desktop\Robot_Freamwork\Task\Task25.robot">
+<test id="s1-t1" name="Test Case 1" line="6">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 1</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.849306" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.847784" elapsed="0.001522"/>
+</test>
+<test id="s1-t2" name="Test Case 2" line="10">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 2</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.849306" elapsed="0.001028"/>
+</kw>
+<tag>regression</tag>
+<status status="PASS" start="2024-09-18T17:03:04.849306" elapsed="0.001028"/>
+</test>
+<test id="s1-t3" name="Test Case 3" line="14">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 3</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.853239" elapsed="0.000000"/>
+</kw>
+<tag>critical</tag>
+<status status="PASS" start="2024-09-18T17:03:04.853239" elapsed="0.000000"/>
+</test>
+<test id="s1-t4" name="Test Case 4" line="18">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.853239" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.853239" elapsed="0.000000"/>
+</test>
+<test id="s1-t5" name="Test Case 5" line="22">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.854264" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.853239" elapsed="0.001025"/>
+</test>
+<test id="s1-t6" name="Test Case 6" line="26">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.854264" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.854264" elapsed="0.000000"/>
+</test>
+<test id="s1-t7" name="Test Case 7" line="30">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.854264" elapsed="0.000999"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.854264" elapsed="0.000999"/>
+</test>
+<test id="s1-t8" name="Test Case 8" line="34">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.855263" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.855263" elapsed="0.000000"/>
+</test>
+<test id="s1-t9" name="Test Case 9" line="38">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.855263" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.855263" elapsed="0.000000"/>
+</test>
+<test id="s1-t10" name="Test Case 10" line="42">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.856263" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.856263" elapsed="0.000000"/>
+</test>
+<test id="s1-t11" name="Test Case 11" line="46">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.856767" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.856263" elapsed="0.000504"/>
+</test>
+<test id="s1-t12" name="Test Case 12" line="50">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running Test Case 4</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-18T17:03:04.856767" elapsed="0.000000"/>
+</kw>
+<tag>smoke</tag>
+<status status="PASS" start="2024-09-18T17:03:04.856767" elapsed="0.000000"/>
+</test>
+<doc>Example of parallel test execution using Pabot and --processes</doc>
+<status status="PASS" start="2024-09-18T17:03:04.733313" elapsed="0.123454"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">critical</stat>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="10" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat pass="12" fail="0" skip="0" id="s1" name="Task25">Task25</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
