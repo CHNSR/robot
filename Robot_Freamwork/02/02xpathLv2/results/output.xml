@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-23T14:36:33.971571" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Freamwork" source="C:\Users\chano\Desktop\Robot_Freamwork">
+<suite id="s1-s1" name="02" source="C:\Users\chano\Desktop\Robot_Freamwork\02">
+<suite id="s1-s1-s1" name="02xpathLv2" source="C:\Users\chano\Desktop\Robot_Freamwork\02\02xpathLv2">
+<suite id="s1-s1-s1-s1" name="Xpath01" source="C:\Users\chano\Desktop\Robot_Freamwork\02\02xpathLv2\xpath01.robot">
+<test id="s1-s1-s1-s1-t1" name="TC01-test xpath" line="14">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-23T14:36:34.232485" level="INFO">Opening browser 'gc' to base url 'https://www.nejavu.com/'.</msg>
+<arg>https://www.nejavu.com/</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-23T14:36:34.232485" elapsed="6.149394"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T14:36:40.383878" level="INFO">Clicking element 'xpath=//a[@class='close-modal']'.</msg>
+<arg>xpath=//a[@class='close-modal']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T14:36:40.382878" elapsed="0.192383"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T14:36:40.576988" level="INFO">Clicking element 'xpath=//a[text()="ยอมรับ"]'.</msg>
+<arg>xpath=//a[text()="ยอมรับ"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T14:36:40.576988" elapsed="0.399826"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T14:36:40.978580" level="INFO">Typing text 'ดราก้อนบอล ซุปเปอร์ เล่ม 19' into text field 'id=search-dropdown'.</msg>
+<arg>id=search-dropdown</arg>
+<arg>ดราก้อนบอล ซุปเปอร์ เล่ม 19</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T14:36:40.978580" elapsed="0.231300"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T14:36:41.210881" level="INFO">Clicking element 'class=btn-search'.</msg>
+<arg>class=btn-search</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T14:36:41.210881" elapsed="0.218121"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//span[text()="ผลการค้นหา"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T14:36:41.430014" elapsed="0.573163"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T14:36:42.040179" level="INFO">${subtitle} = อาคิระ โทริยามา</msg>
+<var>${subtitle}</var>
+<arg>//h5[text()=' ดราก้อนบอล ซุปเปอร์ เล่ม 19']//parent::a//following-sibling::a/p[@class='detail-subtitle']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T14:36:42.003177" elapsed="0.037002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${subtitle}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-23T14:36:42.041179" elapsed="0.000998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${subtitle}</arg>
+<arg>อาคิระ โทริยามา</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-23T14:36:42.043177" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-23T14:36:34.230626" elapsed="7.814561"/>
+</test>
+<status status="PASS" start="2024-09-23T14:36:34.008710" elapsed="8.038468"/>
+</suite>
+<status status="PASS" start="2024-09-23T14:36:34.003744" elapsed="8.045002"/>
+</suite>
+<status status="PASS" start="2024-09-23T14:36:34.001208" elapsed="8.051005"/>
+</suite>
+<status status="PASS" start="2024-09-23T14:36:33.977945" elapsed="8.076267"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Freamwork">Robot Freamwork</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="02">Robot Freamwork.02</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="02xpathLv2">Robot Freamwork.02.02xpathLv2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Xpath01">Robot Freamwork.02.02xpathLv2.Xpath01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

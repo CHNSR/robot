@@ -1,194 +1,285 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-19T12:05:07.385092" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-23T21:40:46.712454" rpa="false" schemaversion="5">
 <suite id="s1" name="Robot Freamwork" source="C:\Users\chano\Desktop\Robot_Freamwork">
-<suite id="s1-s1" name="Task" source="C:\Users\chano\Desktop\Robot_Freamwork\Task">
-<suite id="s1-s1-s1" name="Task16" source="C:\Users\chano\Desktop\Robot_Freamwork\Task\Task16.robot">
-<test id="s1-s1-s1-t1" name="Test Factorial Calculation" line="10">
-<kw name="Calculate Factorial">
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${number} == 1</arg>
-<arg>Return From Keyword</arg>
-<arg>1</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.406106" elapsed="0.000000"/>
+<suite id="s1-s1" name="02" source="C:\Users\chano\Desktop\Robot_Freamwork\02">
+<suite id="s1-s1-s1" name="Task" source="C:\Users\chano\Desktop\Robot_Freamwork\02\Task">
+<suite id="s1-s1-s1-s1" name="Task" source="C:\Users\chano\Desktop\Robot_Freamwork\02\Task\task.robot">
+<test id="s1-s1-s1-s1-t1" name="Tc-02 Login" line="116">
+<kw name="Login doppioweb">
+<kw name="Open url in chrome">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:46.937386" level="INFO">Opening browser 'gc' to base url 'https://training-platform.doppio-tech.com/'.</msg>
+<arg>${url}</arg>
+<arg>gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-23T21:40:46.936387" elapsed="5.862921"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.407107" level="INFO">${previous} = 4</msg>
-<var>${previous}</var>
-<arg>${number} - 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.407107" elapsed="0.000000"/>
+<arg>https://training-platform.doppio-tech.com/</arg>
+<status status="PASS" start="2024-09-23T21:40:46.935387" elapsed="5.864944"/>
 </kw>
-<kw name="Calculate Factorial">
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${number} == 1</arg>
-<arg>Return From Keyword</arg>
-<arg>1</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.408113" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//header//span[@aria-label='user']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:40:52.801332" elapsed="0.083481"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.409110" level="INFO">${previous} = 3</msg>
-<var>${previous}</var>
-<arg>${number} - 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.408113" elapsed="0.000997"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:52.886818" level="INFO">Clicking element 'xpath=//header//span[@aria-label='user']'.</msg>
+<arg>xpath=//header//span[@aria-label='user']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:52.884813" elapsed="0.209379"/>
 </kw>
-<kw name="Calculate Factorial">
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${number} == 1</arg>
-<arg>Return From Keyword</arg>
-<arg>1</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.409110" elapsed="0.001000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:53.095192" level="INFO">Typing text 'chanon06@gmail.com' into text field '//span[@aria-label='user']/ancestor::span/following-sibling::input'.</msg>
+<arg>//span[@aria-label='user']/ancestor::span/following-sibling::input</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:53.095192" elapsed="0.246075"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.410110" level="INFO">${previous} = 2</msg>
-<var>${previous}</var>
-<arg>${number} - 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.410110" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:53.344271" level="INFO">Typing text '12345678Chanon!' into text field '//input[@type='password']'.</msg>
+<arg>//input[@type='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:53.342268" elapsed="0.315823"/>
 </kw>
-<kw name="Calculate Factorial">
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${number} == 1</arg>
-<arg>Return From Keyword</arg>
-<arg>1</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.411127" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:53.661528" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:53.659095" elapsed="0.104383"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.411127" level="INFO">${previous} = 1</msg>
-<var>${previous}</var>
-<arg>${number} - 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.411127" elapsed="0.000000"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//button[span[text()='OK']]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:40:53.764492" elapsed="0.277897"/>
 </kw>
-<kw name="Calculate Factorial">
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.412640" level="INFO">Returning from the enclosing user keyword.</msg>
-<arg>1</arg>
-<doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.412640" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:54.044433" level="INFO">Clicking element '//button[span[text()='OK']]'.</msg>
+<arg>//button[span[text()='OK']]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:54.043394" elapsed="0.190551"/>
 </kw>
-<arg>${number} == 1</arg>
-<arg>Return From Keyword</arg>
-<arg>1</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.411127" elapsed="0.002538"/>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-09-23T21:40:46.934387" elapsed="7.300617"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${previous}</var>
-<arg>${number} - 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-09-19T12:05:07.413665" elapsed="0.000000"/>
+<kw name="Search phone in search bar">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:54.238638" level="INFO">Typing text 'phone' into text field '//input[@placeholder='input search text']'.</msg>
+<arg>//input[@placeholder='input search text']</arg>
+<arg>${searchtxt}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:54.236997" elapsed="0.277380"/>
 </kw>
-<kw name="Calculate Factorial">
-<var>${cal}</var>
-<arg>${previous}</arg>
-<status status="NOT RUN" start="2024-09-19T12:05:07.413665" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:54.515431" level="INFO">Clicking element '//div[@class='search-container']/span//button'.</msg>
+<arg>//div[@class='search-container']/span//button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:54.514377" elapsed="0.075340"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<var>${result}</var>
-<arg>${number} * ${previous}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="NOT RUN" start="2024-09-19T12:05:07.413665" elapsed="0.000000"/>
+<arg>${searchtxt}</arg>
+<status status="PASS" start="2024-09-23T21:40:54.235955" elapsed="0.354831"/>
 </kw>
-<kw name="Return From Keyword" owner="BuiltIn">
-<arg>${result}</arg>
-<doc>Returns from the enclosing user keyword.</doc>
-<status status="NOT RUN" start="2024-09-19T12:05:07.413665" elapsed="0.000000"/>
+<kw name="Select phone">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${phonePath}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:40:54.592779" elapsed="0.382565"/>
 </kw>
-<msg time="2024-09-19T12:05:07.413665" level="INFO">${cal} = 1</msg>
-<var>${cal}</var>
-<arg>${previous}</arg>
-<status status="PASS" start="2024-09-19T12:05:07.411127" elapsed="0.002538"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:54.976343" level="INFO">Clicking element '//div[text()='Aoppee phone']'.</msg>
+<arg>${phonePath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:54.976343" elapsed="0.097708"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.414681" level="INFO">${result} = 2</msg>
-<var>${result}</var>
-<arg>${number} * ${previous}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.413665" elapsed="0.001016"/>
+<arg>${phonePath}</arg>
+<status status="PASS" start="2024-09-23T21:40:54.590786" elapsed="0.484272"/>
 </kw>
-<kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.414681" level="INFO">Returning from the enclosing user keyword.</msg>
-<arg>${result}</arg>
-<doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.414681" elapsed="0.000000"/>
+<kw name="Add phone to chart">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()='Add to cart']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:40:55.078051" elapsed="0.375002"/>
 </kw>
-<msg time="2024-09-19T12:05:07.414681" level="INFO">${cal} = 2</msg>
-<var>${cal}</var>
-<arg>${previous}</arg>
-<status status="PASS" start="2024-09-19T12:05:07.410110" elapsed="0.004571"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:55.454748" level="INFO">Clicking element '//span[text()='Add to cart']'.</msg>
+<arg>//span[text()='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:55.453685" elapsed="0.110959"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.415647" level="INFO">${result} = 6</msg>
-<var>${result}</var>
-<arg>${number} * ${previous}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.415647" elapsed="0.001029"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()='OK']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:40:55.565689" elapsed="0.032531"/>
 </kw>
-<kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.416676" level="INFO">Returning from the enclosing user keyword.</msg>
-<arg>${result}</arg>
-<doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.416676" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:55.599271" level="INFO">Clicking element '//span[text()='OK']'.</msg>
+<arg>//span[text()='OK']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:55.598220" elapsed="0.119880"/>
 </kw>
-<msg time="2024-09-19T12:05:07.416676" level="INFO">${cal} = 6</msg>
-<var>${cal}</var>
-<arg>${previous}</arg>
-<status status="PASS" start="2024-09-19T12:05:07.409110" elapsed="0.007566"/>
+<status status="PASS" start="2024-09-23T21:40:55.077062" elapsed="0.642094"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.417665" level="INFO">${result} = 12</msg>
-<var>${result}</var>
-<arg>${number} * ${previous}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.417665" elapsed="0.000000"/>
+<kw name="Click chart ,Fill out the form and click pay">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:55.723865" level="INFO">Clicking element '//span[@aria-label='shopping-cart']'.</msg>
+<arg>//span[@aria-label='shopping-cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:55.722756" elapsed="0.405595"/>
 </kw>
-<kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.417665" level="INFO">Returning from the enclosing user keyword.</msg>
-<arg>${result}</arg>
-<doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.417665" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-23T21:40:58.129963" level="INFO">Slept 2 seconds.</msg>
+<arg>time_=2 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-23T21:40:56.128351" elapsed="2.002630"/>
 </kw>
-<msg time="2024-09-19T12:05:07.417665" level="INFO">${cal} = 12</msg>
-<var>${cal}</var>
-<arg>${previous}</arg>
-<status status="PASS" start="2024-09-19T12:05:07.407107" elapsed="0.011557"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:58.132978" level="INFO">Typing text 'Chanom' into text field '//input[@placeholder='Name']'.</msg>
+<arg>//input[@placeholder='Name']</arg>
+<arg>Chanom</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:58.131974" elapsed="0.160213"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.418664" level="INFO">${result} = 20</msg>
-<var>${result}</var>
-<arg>${number} * ${previous}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.418664" elapsed="0.000000"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:58.294186" level="INFO">Typing text 'Seesom' into text field '//input[@placeholder='Surname']'.</msg>
+<arg>//input[@placeholder='Surname']</arg>
+<arg>${surname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:58.293185" elapsed="0.210975"/>
 </kw>
-<kw name="Return From Keyword" owner="BuiltIn">
-<msg time="2024-09-19T12:05:07.418664" level="INFO">Returning from the enclosing user keyword.</msg>
-<arg>${result}</arg>
-<doc>Returns from the enclosing user keyword.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.418664" elapsed="0.001009"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:58.505176" level="INFO">Typing text 'Nu Pitsanulok' into text field '//input[@placeholder='Shipping address']'.</msg>
+<arg>//input[@placeholder='Shipping address']</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:58.504160" elapsed="0.178355"/>
 </kw>
-<msg time="2024-09-19T12:05:07.419673" level="INFO">${result} = 20</msg>
-<var>${result}</var>
-<arg>5</arg>
-<status status="PASS" start="2024-09-19T12:05:07.406106" elapsed="0.013567"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:40:58.684723" level="INFO">Typing text '0987654321' into text field '//input[@placeholder='Phone number']'.</msg>
+<arg>//input[@placeholder='Phone number']</arg>
+<arg>${phoneNum}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:40:58.683709" elapsed="0.233631"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-23T21:41:03.920289" level="INFO">Slept 5 seconds.</msg>
+<arg>time_=5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-23T21:40:58.917340" elapsed="5.002949"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:03.921297" level="INFO">Clicking element '//button/span[text()='PAY']'.</msg>
+<arg>//button/span[text()='PAY']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:03.920289" elapsed="0.213177"/>
+</kw>
+<arg>${name}</arg>
+<arg>${surname}</arg>
+<arg>${address}</arg>
+<arg>${phoneNum}</arg>
+<status status="PASS" start="2024-09-23T21:40:55.720744" elapsed="8.413722"/>
+</kw>
+<kw name="Select cradit">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:04.137461" level="INFO">Clicking element '//span[text()='Credit Card']'.</msg>
+<arg>//span[text()='Credit Card']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:04.137461" elapsed="0.067698"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:04.206173" level="INFO">Clicking element '//button/span[text()='Next']'.</msg>
+<arg>//button/span[text()='Next']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:04.205159" elapsed="0.108148"/>
+</kw>
+<status status="PASS" start="2024-09-23T21:41:04.135465" elapsed="0.177842"/>
+</kw>
+<kw name="Input cradit card information">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:04.315307" level="INFO">Typing text '4111111111111111' into text field '//input[@placeholder='Valid Card Number']'.</msg>
+<arg>//input[@placeholder='Valid Card Number']</arg>
+<arg>${CardNum}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:04.314306" elapsed="0.173953"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:04.489259" level="INFO">Typing text '05/2026' into text field '//input[@placeholder='MM/YYYY']'.</msg>
+<arg>//input[@placeholder='MM/YYYY']</arg>
+<arg>${Date}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:04.488259" elapsed="0.205403"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:04.694660" level="INFO">Typing text '055' into text field '//input[@placeholder='CVC']'.</msg>
+<arg>//input[@placeholder='CVC']</arg>
+<arg>${CVC}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:04.693662" elapsed="0.135601"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:04.830272" level="INFO">Typing text 'Chanom' into text field '//input[@placeholder='Card Owner Name']'.</msg>
+<arg>//input[@placeholder='Card Owner Name']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:04.829263" elapsed="0.177757"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:05.008020" level="INFO">Clicking element '//button/span[text()='Confirm Payment']'.</msg>
+<arg>//button/span[text()='Confirm Payment']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:05.007020" elapsed="0.108959"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[text()='OK']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:41:05.116979" elapsed="0.246826"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:05.365896" level="INFO">Clicking element '//span[text()='OK']'.</msg>
+<arg>//span[text()='OK']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:05.364819" elapsed="0.118329"/>
+</kw>
+<arg>${CardNum}</arg>
+<arg>${Date}</arg>
+<arg>${CVC}</arg>
+<arg>${name}</arg>
+<status status="PASS" start="2024-09-23T21:41:04.313307" elapsed="1.170348"/>
+</kw>
+<kw name="Show Order and Navigate to shopping page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='success-description']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-23T21:41:05.485680" elapsed="0.249833"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-23T21:41:05.767804" level="INFO">${Get order information} = ORDER ID: 6858
+TOTAL: 29980.00
+DELIVERY INFO: Chanom Seesom
+Nu Pitsanulok
+PHONE: 0987654321</msg>
+<var>${Get order information}</var>
+<arg>//div[@class='success-description']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-23T21:41:05.736515" elapsed="0.032803"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
-<arg>result: ${result}</arg>
+<arg>${Get order information}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-09-19T12:05:07.419673" elapsed="0.000976"/>
+<status status="PASS" start="2024-09-23T21:41:05.769318" elapsed="0.002013"/>
 </kw>
-<status status="PASS" start="2024-09-19T12:05:07.405105" elapsed="0.015544"/>
+<status status="PASS" start="2024-09-23T21:41:05.484163" elapsed="0.287168"/>
+</kw>
+<status status="PASS" start="2024-09-23T21:40:46.933375" elapsed="18.838955"/>
 </test>
-<status status="PASS" start="2024-09-19T12:05:07.403100" elapsed="0.018548"/>
+<status status="PASS" start="2024-09-23T21:40:46.741572" elapsed="19.032757"/>
 </suite>
-<status status="PASS" start="2024-09-19T12:05:07.401571" elapsed="0.021077"/>
+<status status="PASS" start="2024-09-23T21:40:46.739347" elapsed="19.037982"/>
 </suite>
-<status status="PASS" start="2024-09-19T12:05:07.388045" elapsed="0.035656"/>
+<status status="PASS" start="2024-09-23T21:40:46.738341" elapsed="19.042511"/>
+</suite>
+<status status="PASS" start="2024-09-23T21:40:46.716596" elapsed="19.066262"/>
 </suite>
 <statistics>
 <total>
@@ -198,8 +289,9 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="Robot Freamwork">Robot Freamwork</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="Task">Robot Freamwork.Task</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Task16">Robot Freamwork.Task.Task16</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="02">Robot Freamwork.02</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Task">Robot Freamwork.02.Task</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="Task">Robot Freamwork.02.Task.Task</stat>
 </suite>
 </statistics>
 <errors>

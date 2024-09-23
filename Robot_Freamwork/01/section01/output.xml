@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-17T12:29:18.920919" rpa="false" schemaversion="5">
+<suite id="s1" name="first Robot" source="C:\Users\chano\Desktop\Robot_Freamwork\first_Robot.robot">
+<test id="s1-t1" name="Test print text" line="6">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Hello world</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-17T12:29:18.966658" elapsed="0.001033"/>
+</kw>
+<status status="PASS" start="2024-09-17T12:29:18.966035" elapsed="0.001656"/>
+</test>
+<test id="s1-t2" name="TC-002 Verify" line="8">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Say Hello</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-09-17T12:29:18.968690" elapsed="0.001003"/>
+</kw>
+<status status="PASS" start="2024-09-17T12:29:18.968690" elapsed="0.001003"/>
+</test>
+<status status="PASS" start="2024-09-17T12:29:18.922934" elapsed="0.049278"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="first Robot">first Robot</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-09-17T12:29:18.916165" level="WARN">Error in file 'C:\Users\chano\Desktop\Robot_Freamwork\first_Robot.robot' on line 5: Singular section headers like '*** Test case ***' are deprecated. Use plural format like '*** Test Cases ***' instead.</msg>
+</errors>
+</robot>
