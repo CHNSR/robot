@@ -1,22 +1,41 @@
 *** Settings ***
-Library    SeleniumLibrary
+Resource  ../keywords/page/import.robot
 *** Variables ***
-${username}=    chanon06@gmail.com
-${password}=    12345678Chanon!
-${searchtxt}=    phone
+
+
 ${phonePath}=    //div[text()='Aoppee phone']
 ${addCartPath}=    //span[text()='Add to cart']
 ${Get order information}
 ${GetOrderID}
-${name}=    Chanom
-${surname}=    Seesom
-${address}=    Nu Pitsanulok   
-${phoneNum}=    0987654321
-#cradit data
-${CardNum}=    4111111111111111    
-${Date}=    05/2026
-${CVC}=    055
-${nameOnCard}=    Chanom Seesom
+
+
+
+*** Test Cases ***
+#robot --include login C:/Users/chano/Desktop/Robot_Freamwork/02/Task/task.robot รันเฉพาะ Tag ที่ต้องการ
+#robot --exclude login C:/Users/chano/Desktop/Robot_Freamwork/02/Task/task.robot ข้าม Tag ที่ไม่ต้องการ
+#robot --include login --exclude register C:/Users/chano/Desktop/Robot_Freamwork/02/Task/task.robot
+TC-00 test yaml
+    [Tags]    tc01
+        Log To Console     ${users.user01.username}    # robotcode: ignore
+        Log To Console    ${searchtxt.searchtext_1}    # robotcode: ignore
+TC-01 register
+    [Tags]    register
+   Register doppioweb    ${users.user01.username}    ${users.user01.password}    # robotcode: ignore
+
+Tc-02 Login 
+    [Tags]    login
+    Login doppioweb    ${users.user01.username}    ${users.user01.password}    # robotcode: ignore
+    Search phone in search bar    ${searchtxt.searchtxt_1}
+    Select phone     ${phonePath}
+    Add phone to chart     
+    Click chart ,Fill out the form and click pay    ${users.user01.name}    ${users.user01.surname}    ${users.user01.address}    ${user.user01.phoneNum}    # robotcode: ignore
+    Select cradit 
+    Input cradit card information    ${cradit_card.caedNum}    ${cradit_card.date}    ${cradit_card.cvc}    ${cradit_card.nameOnCard}
+    Show Order and Navigate to shopping page
+    Click user infomation
+    Show Preparing
+    Get order form Pending payment
+
 *** Keywords ***
 Open url in chrome
     [Arguments]    ${url}
@@ -34,7 +53,7 @@ Register doppioweb
     Click Element    //button[span[text()='SIGNUP']]
     #ระวังเพราะ widge นี้ ควรรอ
     Wait Until Element Is Visible    //button[span[text()='OK']] 
-    Click Element   //button[span[text()='OK']]
+    Click Element   c
     Close Browser
 
 Login doppioweb
@@ -48,6 +67,7 @@ Login doppioweb
     Wait Until Element Is Visible    //button[span[text()='OK']] 
     Click Element   //button[span[text()='OK']]
 Search phone in search bar
+
     [Arguments]    ${searchtxt}
     Input Text     //input[@placeholder='input search text']    ${searchtxt}
     Click Element    //div[@class='search-container']/span//button
@@ -109,20 +129,3 @@ Get order form Pending payment
     Log To Console    OrderId form Pending payment: ${GetOrderID}
 
 
-*** Test Cases ***
-#TC-01 register
-#   Register doppioweb    ${username}    ${password}
-
-Tc-02 Login 
-    Login doppioweb    ${username}    ${password}
-    
-    Search phone in search bar    ${searchtxt}
-    Select phone     ${phonePath}
-    Add phone to chart     
-    Click chart ,Fill out the form and click pay    ${name}    ${surname}    ${address}    ${phoneNum}
-    Select cradit 
-    Input cradit card information    ${CardNum}    ${Date}    ${CVC}    ${name}
-    Show Order and Navigate to shopping page
-    #Click user infomation
-    #Show Preparing
-    #Get order form Pending payment
