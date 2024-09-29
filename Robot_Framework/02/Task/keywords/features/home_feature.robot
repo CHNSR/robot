@@ -2,10 +2,16 @@
 Resource    ../page/import.robot
 
 *** Keywords ***
-Click product and add product to cart
-    [Arguments]    ${product_name}    
-    Wait Until Element Is Visible   xpath=//div[text()='${product_name}']
-    Click Element    xpath=//div[text()='${product_name}']
-    Add product to cart 
-    Wait and click ok
+Search and add product to cart
+    [Arguments]    ${searchtxt}    ${product_name}    
+    home_page.Search product in search bar    ${searchtxt}
+    SeleniumLibrary.Wait Until Element Is Visible    //div[@class='ant-card-meta-title' and text()='${product_name}']
+    SeleniumLibrary.Click Element    //div[@class='ant-card-meta-title' and text()='${product_name}']
+    home_page.Add product to cart    ${home_locator.add_to_cart_btn}
+    common.Wait and click    ${home_locator.ok_box}     ${home_locator.ok_button}
 
+Show order id in console
+    common.Click user icon
+    user_profile_page.Show orderid
+    ${OrderID}    Get Text    ${user_profile_locator.orderID}
+    Log To Console    orderID:${OrderID}

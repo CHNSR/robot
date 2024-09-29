@@ -1,10 +1,11 @@
 *** Settings ***
 Resource    ../page/import.robot
 *** Keywords ***
-Fill in Credit Card Details and Confirm Payment
+Add credit card and payment
     [Arguments]    ${creditcard}    ${exp}    ${cvc}    ${name}
-    Fill card number in Credit Card Details    ${creditcard}  
-    Fill expire date in Credit Card Details    ${exp}        
-    Fill cvc in Credit Card Details    ${cvc} 
-    Fill card holder name in Credit Card Details    ${name} 
-    Click ConfirmPayment
+    payment_page.Add card number    ${creditcard}  
+    payment_page.Add expire date   ${exp}        
+    payment_page.Add cvc    ${cvc} 
+    payment_page.Add card holder name    ${name} 
+    payment_page.Click ConfirmPayment
+    payment_page.Click continue shopping

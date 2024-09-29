@@ -1,33 +1,32 @@
 *** Settings ***
 Resource    ./import.robot
 *** Keywords ***
-Select Payment Method
+Select payment Method
     Click Element    ${payment_locator.cradite_radio}
-    SeleniumLibrary.Click Element    //button/span[text()='Next']    #${payment_locator.next_btn}
+    SeleniumLibrary.Click Element    ${payment_locator.next_btn}
 
-Fill card number in Credit Card Details
+Add card number 
     [Arguments]    ${creditcard}    
     SeleniumLibrary.Input Text    ${payment_locator.card_number_container}    ${creditcard}
 
-Fill expire date in Credit Card Details    
+Add expire date     
     [Arguments]    ${exp}    
     SeleniumLibrary.Input Text    ${payment_locator.exp_container}    ${exp}
 
-Fill cvc in Credit Card Details 
+Add cvc 
     [Arguments]    ${cvc}
     SeleniumLibrary.Input Text    ${payment_locator.cvc_container}    ${cvc}
 
-Fill card holder name in Credit Card Details 
+Add card holder name  
     [Arguments]    ${name}    
     SeleniumLibrary.Input Text    ${payment_locator.holder_name_container}    ${name} 
 
-Click ConfirmPayment
+Click confirm payment
     SeleniumLibrary.Click Button    ${payment_locator.confirm_payment_btn}
-    SeleniumLibrary.Wait Until Element Is Visible    ${payment_locator.ok_btn}
-    SeleniumLibrary.Click Button    ${payment_locator.ok_btn}
+    common.Wait and click    ${payment_locator.ok_btn}    ${payment_locator.ok_btn}
 
-Click Continue Shopping
-    SeleniumLibrary.Wait Until Element Is Visible    ${payment_locator.confirm_payment_btn}
+Click continue shopping
+    SeleniumLibrary.Wait Until Element Is Visible    ${payment_locator.div_of_orderdetail}
     ${Get order information}=    Get Text    ${payment_locator.div_of_orderdetail}
     Click Element    ${payment_locator.continue_to_shoping}
     Log To Console    ${Get order information}

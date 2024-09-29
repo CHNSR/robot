@@ -1,27 +1,30 @@
 *** Settings ***
 Resource    ../keywords/page/import.robot
+
+
 *** Test Cases ***
 Test Register 
+    Evaluate    createUniqueID.add_new_user_to_yaml()
+    ${Userdata}=    Evaluate    createUniqueID.get_latest_user_from_yaml()    # Get the latest user from YAML
     common.Open website
-    common.Click user icon
-    login_page.Click Sign up button
-    register_page.Input email    ${users.user01.username}
-    register_page.Input password   ${users.user01.password}
-    register_page.Input Confirm Password    ${users.user01.password}
-    register_page.Submit
-    common.Click user icon
+    register_feature.Register    ${Userdata['username']}    ${Userdata['password']}    ${Userdata['confirmpassword']} 
     user_profile_page.Log out
+
 Test Log in
+    &{lastuser}    Evaluate    createUniqueID.get_latest_user_from_yaml()          
     common.Open Website
-    common.Click user icon
-    login_feature.Login    ${users.user01.username}    ${users.user01.password}
-    home_page.Search product in search bar    ${searchtxt.searchtxt_1}
-    home_feature.Click product and add product to cart    ${product.product_1}
-    common.Open Cart
-    cart_feature.Fill in Delivery info and Start Payment Process    ${users.user01.name}    ${users.user01.surname}    
-    ...    ${users.user01.address}    ${users.user01.phoneNum}    ${users.user01.email} 
-    payment_page.Select Payment Method 
-    payment_feature.Fill in Credit Card Details and Confirm Payment    ${cradit_card.cardNum}    ${cradit_card.date}    
-    ...    ${cradit_card.cvc}    ${cradit_card.nameOnCard}    
-    common.Click User ICON
-    #รัน uat sit robot  -d result -v type:uat tc01.robot
+    login_feature.Login    ${lastuser['username']}    ${lastuser['password']}
+    home_feature.Search and add product to cart    ${searchtxt.searchtxt_1}    ${product.product_1}
+    cart_feature.Purchase product
+    ...    ${lastuser['name']}    
+    ...    ${lastuser['surname']}    
+    ...    ${lastuser['address']}    
+    ...    ${lastuser['phoneNum']}    
+    ...    ${lastuser['email']}  
+    payment_feature.Add credit card and payment 
+    ...    ${cradit_card.cardNum}    
+    ...    ${cradit_card.date}    
+    ...    ${cradit_card.cvc}    
+    ...    ${cradit_card.nameOnCard}    
+    home_feature.Show order id in console
+    #uat sit |robot  -d result -v type:uat tc01.robot

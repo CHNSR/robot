@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library     ../../resources/testdata/createUniqueID.py
 
 Variables    ../../resources/testdata/testdata.yaml
 Variables    ../../resources/setting/setting.yaml
@@ -8,6 +9,7 @@ Resource    ../features/login_feature.robot
 Resource    ../features/home_feature.robot
 Resource    ../features/cart_feature.robot
 Resource    ../features/payment_feature.robot
+Resource    ../features/register_feature.robot
 
 #Resource page
 Resource    common.robot

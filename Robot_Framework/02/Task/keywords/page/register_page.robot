@@ -15,8 +15,6 @@ Input confirm password
     [Arguments]    ${cf_password}
     SeleniumLibrary.Input Text    ${register_locator.confirm_password_container}    ${cf_password}
 
-Submit
-    
+Click register button
     Click Element   ${register_locator.submit_btn}
-    Wait Until Element Is Visible    ${register_locator.ok_btn}
-    Click Element    ${register_locator.ok_btn}
+    common.Wait and click    ${register_locator.ok_btn}    ${register_locator.ok_btn}

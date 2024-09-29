@@ -1,12 +1,23 @@
 users:
   user01:
-    username: chanon14@gmail.com
+    username: chanon16@gmail.com
     password: 12345678Chanon!
+    confirmpassword: 12345678Chanon!
     name: Chanon
     surname: Seesom
     address: Nu Pitsanulok
     phoneNum: 0987654321
     email:  chanon06@gmail.com
+  user02:
+    username: chanon17@gmail.com
+    password: 12345678Chanon!
+    confirmpassword: 12345678Chanon!
+    name: Chanon
+    surname: Seesom
+    address: Nu Pitsanulok
+    phoneNum: 0987654321
+    email:  chanon06@gmail.com
+
 
 
 cradit_card:

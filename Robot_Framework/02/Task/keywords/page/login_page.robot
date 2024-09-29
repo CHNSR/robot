@@ -2,18 +2,16 @@
 Resource    ./import.robot
 
 *** Keywords ***
-Fill in an Email
+Fill email
     [Arguments]    ${email}
     SeleniumLibrary.Input Text  ${login_locator.email_container}    ${email}
 
-Fill in password  
+Fill password  
     [Arguments]    ${password}  
     SeleniumLibrary.Input Text    ${login_locator.password_container}    ${password}
 
-Click login and ok_btn
+Click login button
     SeleniumLibrary.Click Button    ${login_locator.log_in_btn} 
-    SeleniumLibrary.Wait Until Element Is Visible    ${log_in_locator.ok_btn}     10s
-    SeleniumLibrary.Click Button    ${login_locator.ok_btn}
 
-Click Sign up button
-    SeleniumLibrary.Click Element    ${login_locator.sign_up_btn}
+Click sign up button 
+    common.Wait and click    ${login_locator.sign_up_btn}    ${login_locator.sign_up_btn}

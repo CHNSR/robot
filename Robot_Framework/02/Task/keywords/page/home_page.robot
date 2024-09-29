@@ -7,10 +7,7 @@ Search product in search bar
     SeleniumLibrary.Click Element    ${home_locator.search_btn}
 
 Add product to cart
-    SeleniumLibrary.Wait Until Element Is Visible    ${home_locator.add_to_cart_btn}
-    SeleniumLibrary.Click Element    ${home_locator.add_to_cart_btn}    
+    [Arguments]    ${add_to_cart_button}
+    SeleniumLibrary.Wait Until Element Is Visible    ${add_to_cart_button}
+    SeleniumLibrary.Click Element        ${add_to_cart_button}
     
-
-Wait and click ok
-    SeleniumLibrary.Wait Until Element Is Visible     ${home_locator.ok_popup}    
-    SeleniumLibrary.Click Element    ${home_locator.ok_popup}
